@@ -11,7 +11,7 @@ base = None
     base = "Win32GUI" """
 
 setup(  name = "Jammed Key Detector",
-        version = "1.0",
+        version = "1.1",
         description = "This application will detect the jammed key on keyboard.",
         options = {"build_exe": build_exe_options},
-        executables = [Executable("main.py", base=base)])
+        executables = [Executable("main.py", base=base, targetName='Jammed Key Detector')])

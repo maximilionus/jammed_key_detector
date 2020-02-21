@@ -1,2 +1,5 @@
 # Ignore cx-Freeze build
 build
+
+# Ignore pycache
+__pycache__
