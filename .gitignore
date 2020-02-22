@@ -3,3 +3,6 @@ build
 
 # Ignore pycache
 __pycache__
+
+# Ignore config.ini file that will be generated on app start
+config.ini

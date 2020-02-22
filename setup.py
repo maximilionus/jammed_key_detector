@@ -1,9 +1,11 @@
 import sys
 from cx_Freeze import setup, Executable
 
-include_files = ['config.ini']
 # Dependencies are automatically detected, but it might need fine tuning.
-build_exe_options = {"packages": ["os"], "excludes": ["tkinter"], "include_files": include_files}
+build_exe_options = {
+	"packages": ["os"],
+	"excludes": ["tkinter"]
+}
 
 base = None
 """ if sys.platform == "win32":

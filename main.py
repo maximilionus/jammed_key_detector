@@ -4,10 +4,12 @@ import os
 import time
 import configparser
 from termcolor import colored
+import helpers as h
 
 if sys.platform == 'win32':
 	os.system('color')
 
+h.check_config_file()
 config = configparser.ConfigParser()
 config.read('config.ini')
 
