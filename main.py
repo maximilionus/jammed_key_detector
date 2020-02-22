@@ -8,6 +8,7 @@ import helpers as h
 
 if sys.platform == 'win32':
 	os.system('color')
+os.system('title Jammed Key Detector')
 
 h.check_config_file()
 config = configparser.ConfigParser()
