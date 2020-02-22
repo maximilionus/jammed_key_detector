@@ -15,4 +15,4 @@ base = None
 setup(  name = "Jammed Key Detector",
         description = "This application will detect the jammed key on keyboard.",
         options = {"build_exe": build_exe_options},
-        executables = [Executable("main.py", base=base, targetName='Jammed Key Detector')])
+        executables = [Executable("main.py", base=base, targetName='Jammed Key Detector', icon='./src/jkd_icon.ico')])
