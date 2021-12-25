@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "jammed_key_detector"
+version = "2.0.0"
+description = ""
+authors = ["maximilionus <maximilionuss@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.7, <3.11"
+pyinstaller = "^4.7"
+kivymd = "^0.104.2"
+keyboard = "^0.13.5"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

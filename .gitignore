@@ -1,0 +1,5 @@
+# Ignore vscode config
+.vscode
+
+# Ignore pycache in any folder
+__pycache__
