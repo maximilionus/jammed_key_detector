@@ -9,23 +9,20 @@ keypress_time = time.time()
 prev_key = 'none'
 
 
-def keypress_event_check(event):
+def iskeyjammed_event_check(event) -> bool:
     if event.event_type == 'down':
         global keypress_time, prev_key
-        key_input = str(event.name)
-        new_keypress_time = time.time()
-        delay_final = new_keypress_time - keypress_time
-        keypress_time = new_keypress_time
 
-        if key_input == prev_key and delay_final <= MAX_DELAY:
-            pass
-            # TODO: Jammed key detected on `key_input` -> Display on GUI
-        else:
-            pass
-            # TODO: Fine for `key_input`, key is not jammed -> Display on GUI
+        key_input = str(event.name)
+        delay_final = event.time - keypress_time
+        keypress_time = event.time
+
+        result = key_input == prev_key and delay_final <= MAX_DELAY
         prev_key = key_input
+
+        return result
 
 
 def detect_jammed_key():
-    keyboard.hook(keypress_event_check)
+    keyboard.hook(iskeyjammed_event_check)
     keyboard.wait()

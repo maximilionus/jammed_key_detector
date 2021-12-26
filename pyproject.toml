@@ -5,6 +5,9 @@ description = ""
 authors = ["maximilionus <maximilionuss@gmail.com>"]
 license = "MIT"
 
+[tool.poetry.scripts]
+app = "jammed_key_detector.main:run"
+
 [tool.poetry.dependencies]
 python = ">=3.7, <3.11"
 pyinstaller = "^4.7"
